@@ -1,31 +1,27 @@
 #include <iostream>
-#include <iomanip>
+#include <string>
 
 using namespace std;
 
-const int NumStores= 5;
-const int AsteriskValue= 100;
-
 int main()
 {
-    int sales[NumStores];
+    int num1, num2;
+    cout << "Enter the first integer: ";
+    cin >> num1;
+    cout << "Enter the second integer: ";
+    cin >> num2;
 
-    for(int i=0; i<NumStores; i++){
-        cout<<"Enter today'sales for store " << (i+1) << ": ";
-        cin>>sales[i];
-    
-    }
-    cout << "\nSALES BAR CHART" <<endl;
-    cout << "(Each * =$" << AsteriskValue << ")\n";
-
-    for(int i=0; i<NumStores; i++)
+    if (num2<num1)
     {
-        cout<<"Store "<< (i+1) << ":";
-        int numAsterisks = sales[i] / AsteriskValue;
-        for(int j=0; j<numAsterisks; j++)
-        {
-            cout<<"*";
-        }
+        cout<< "Second integer can't be less than the first" <<endl;
+ }
+ else
+ {
+    for(int i = num1; i<= num2; i+=5)
+    {
+        cout<< i << " ";
     }
+    cout << endl;
+ }
  return 0;
 }
